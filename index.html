@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scribblit - Responsive Layout</title>
+    <style>
+        /* ตั้งค่าพื้นฐานและพื้นหลังสีเทาแบบในภาพ */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+        }
+
+        body {
+            background-color: #e5e5e5;
+            color: #111;
+            padding: 40px 20px;
+        }
+
+        /* โครงสร้างหลัก แบ่ง 2 ฝั่ง */
+        .split-layout {
+            display: flex;
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+            align-items: flex-start;
+        }
+
+        /* กล่องสีขาวของแต่ละฝั่ง */
+        .column {
+            background-color: #ffffff;
+            flex: 1;
+            border-radius: 24px;
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            display: flex;
+            flex-direction: column;
+            gap: 60px;
+        }
+
+        /* ================= ส่วนประกอบย่อย ================= */
+        .placeholder-img {
+            background-color: #f0f0f0;
+            border-radius: 16px;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #999;
+            font-size: 14px;
+            border: 2px dashed #ccc;
+        }
+
+        h1, h2, h3 { line-height: 1.2; letter-spacing: -0.5px; }
+        p { color: #666; line-height: 1.5; margin-top: 10px; font-size: 14px;}
+
+        /* ปุ่ม */
+        .btn-group { display: flex; gap: 10px; margin-top: 20px; justify-content: center; }
+        .btn-dark { background: #111; color: #fff; padding: 10px 20px; border-radius: 20px; border: none; font-size: 12px; font-weight: bold; cursor: pointer; }
+        .btn-light { background: #fff; color: #111; padding: 10px 20px; border-radius: 20px; border: 1px solid #ccc; font-size: 12px; cursor: pointer; }
+
+        /* การ์ดฟีเจอร์แบบ Grid */
+        .feature-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+        .feature-card { background: #fafafa; padding: 20px; border-radius: 16px; text-align: center; }
+
+        /* การ์ดราคา */
+        .pricing-section { text-align: center; }
+        .pricing-grid { display: flex; gap: 15px; margin-top: 20px; align-items: flex-end; }
+        .price-card { flex: 1; background: #fafafa; padding: 20px; border-radius: 16px; text-align: left; }
+        .price-card.pro { background: #111; color: #fff; transform: scale(1.05); }
+        .price-card.pro p { color: #ccc; }
+        .price-card.pro .btn-dark { background: #fff; color: #111; width: 100%; margin-top: 15px;}
+        .price-card .btn-light { width: 100%; margin-top: 15px; }
+
+        /* ลิสต์ฟีเจอร์ด้านขวา */
+        .feature-list { display: flex; gap: 20px; }
+        .feature-list-text { flex: 1; display: flex; flex-direction: column; gap: 20px; }
+
+        /* Footer */
+        .footer { display: flex; justify-content: space-between; font-size: 12px; border-top: 1px solid #eee; padding-top: 20px; }
+        .footer-col { display: flex; flex-direction: column; gap: 8px; }
+        .footer-col strong { color: #111; margin-bottom: 5px; }
+        .footer-col a { color: #666; text-decoration: none; }
+
+        /* ================= Responsive (รองรับหน้าจอมือถือ/แท็บเล็ต) ================= */
+        @media (max-width: 900px) {
+            body {
+                padding: 20px 10px; /* ลดขอบหน้าจอลงเมื่ออยู่บนมือถือ */
+            }
+            .split-layout {
+                flex-direction: column; /* เปลี่ยนเลย์เอาต์จากซ้าย-ขวา ให้เป็น บน-ล่าง */
+            }
+            .column {
+                width: 100%;
+                padding: 25px; /* ลด padding ภายในกล่องขาวไม่ให้กินพื้นที่มากไป */
+                gap: 40px;
+            }
+            .feature-grid {
+                grid-template-columns: 1fr; /* ให้การ์ดฟีเจอร์เรียง 1 คอลัมน์ */
+            }
+            .pricing-grid {
+                flex-direction: column; /* ให้การ์ดราคาเรียงซ้อนกันบนล่าง */
+                align-items: center;
+                gap: 20px;
+            }
+            .price-card {
+                width: 100%; /* ให้การ์ดราคากว้างเต็มกล่อง */
+            }
+            .price-card.pro {
+                transform: scale(1); /* ยกเลิกการขยายกล่อง Pro ในมือถือ เพื่อไม่ให้ล้นจอ */
+            }
+            .feature-list {
+                flex-direction: column; /* ให้รูปกล่อง 3D และตัวอักษรเรียงบน-ล่าง */
+            }
+            .feature-list .placeholder-img {
+                width: 100% !important; /* บังคับให้รูปกว้างเต็มกล่อง */
+                height: 200px;
+            }
+            .footer {
+                flex-direction: column; /* ให้เมนู Footer เรียงซ้อนกัน */
+                gap: 30px;
+            }
+            .footer > div {
+                width: 100% !important;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="split-layout">
+        
+        <!-- ================= ฝั่งซ้าย (Left Column) ================= -->
+        <div class="column">
+            
+            <!-- Hero Section -->
+            <div style="text-align: center;">
+                <p style="font-weight: bold; color: #111; margin-bottom: 40px;">N Scribblit</p>
+                <p style="font-size: 12px; color: #666; background: #eee; display: inline-block; padding: 4px 12px; border-radius: 20px; margin-bottom: 20px;">100K+ Active Users</p>
+                <h1 style="font-size: 32px;">Ideas. Notes. Clarity.<br>Wherever your mind goes.</h1>
+                <p>Combine note-taking, idea tracking, and daily planning in one smart notebook.</p>
+                
+                <div class="btn-group">
+                    <button class="btn-dark">Download for Windows</button>
+                    <button class="btn-light">Start Free Trial ></button>
+                </div>
+
+                <!-- เว้นที่ว่างสำหรับรูปภูเขา -->
+                <div class="placeholder-img" style="height: 250px; margin-top: 30px;">
+                    [ ใส่รูปภาพ Hero / ภูเขา ตรงนี้ ]
+                </div>
+            </div>
+
+            <!-- Notes Section -->
+            <div>
+                <h2>Notes that work the way you think.</h2>
+                <p>Notes shouldn't feel messy or scattered. With our app, every thought flows into an organized system.</p>
+                <!-- เว้นที่ว่างสำหรับรูปหน้าตาแอปพลิเคชัน -->
+                <div class="placeholder-img" style="height: 200px; margin-top: 20px;">
+                    [ ใส่รูปภาพ Interface การพิมพ์โน้ต ตรงนี้ ]
+                </div>
+            </div>
+
+            <!-- Platform Grid (Android, iOS) -->
+            <div>
+                <h2>Ideas. Notes. Clarity.<br>Wherever your mind goes.</h2>
+                <div class="feature-grid" style="margin-top: 20px;">
+                    <div class="feature-card">
+                        <div class="placeholder-img" style="height: 100px; border: none; background: #eee; margin-bottom: 15px;">[ รูป Android ]</div>
+                        <h3 style="font-size: 14px;">Notely for Android</h3>
+                    </div>
+                    <div class="feature-card">
+                        <div class="placeholder-img" style="height: 100px; border: none; background: #eee; margin-bottom: 15px;">[ รูป iOS ]</div>
+                        <h3 style="font-size: 14px;">Notely for iOS</h3>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- ================= ฝั่งขวา (Right Column) ================= -->
+        <div class="column">
+            
+            <!-- Platform Grid (Windows, Web) -->
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <div class="placeholder-img" style="height: 120px; border: none; background: #eee; margin-bottom: 15px;">[ รูป Windows ]</div>
+                    <h3 style="font-size: 14px;">Notely for Windows / Linux</h3>
+                </div>
+                <div class="feature-card">
+                    <div class="placeholder-img" style="height: 120px; border: none; background: #eee; margin-bottom: 15px;">[ รูป Web ]</div>
+                    <h3 style="font-size: 14px;">Notely for Web</h3>
+                </div>
+            </div>
+
+            <!-- Pricing Section -->
+            <div class="pricing-section">
+                <h2>Choose your pricing plan</h2>
+                <p>Keep your notes organized, clear, and easy to find. With Scribblit, every thought flows.</p>
+                
+                <div class="pricing-grid">
+                    <div class="price-card">
+                        <h2 style="font-size: 24px;">$0.00</h2>
+                        <p style="font-weight: bold; color:#111; margin-top: 5px;">Free</p>
+                        <button class="btn-light">Upgrade to premium</button>
+                    </div>
+                    <div class="price-card pro">
+                        <h2 style="font-size: 24px;">$69.00</h2>
+                        <p style="font-weight: bold; color:#fff; margin-top: 5px;">Pro (Most Popular)</p>
+                        <button class="btn-dark">Upgrade to premium</button>
+                    </div>
+                    <div class="price-card">
+                        <h2 style="font-size: 24px;">$149.00</h2>
+                        <p style="font-weight: bold; color:#111; margin-top: 5px;">Vision Pro</p>
+                        <button class="btn-light">Upgrade to premium</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Smarter Notes Section -->
+            <div>
+                <h2>Smarter Notes. One Simple Space to Capture, Organize & Remember</h2>
+                <p>Simplify the way you take notes. Write down your thoughts instantly.</p>
+                
+                <div class="feature-list" style="margin-top: 30px;">
+                    <!-- เว้นที่ว่างรูปกล่อง 3D -->
+                    <div class="placeholder-img" style="width: 40%; height: auto;">
+                        [ ใส่รูปกล่อง 3D ตรงนี้ ]
+                    </div>
+                    <div class="feature-list-text">
+                        <div>
+                            <strong style="font-size: 14px; color: #111;">Smart Note Capture</strong>
+                            <p style="font-size: 12px; margin-top: 5px;">Quickly jot down ideas, tasks, and reminders without losing flow.</p>
+                        </div>
+                        <div>
+                            <strong style="font-size: 14px; color: #111;">Adaptive Organization</strong>
+                            <p style="font-size: 12px; margin-top: 5px;">Your notes grow with you. Use smart search, categories.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CTA & Footer -->
+            <div>
+                <div style="background: #f0f0f0; padding: 30px; border-radius: 16px; text-align: center; margin-bottom: 40px;">
+                    <h2>How You Take Notes?</h2>
+                    <button class="btn-dark" style="margin-top: 15px;">Get Started Free ></button>
+                </div>
+
+                <div class="footer">
+                    <div style="width: 30%;">
+                        <strong style="color:#111;"># Scribblit</strong>
+                        <p style="font-size: 11px; margin-top: 5px;">Your simple space to capture ideas, stay organized, and never lose a thought.</p>
+                        <p style="font-size: 10px; margin-top: 20px; color: #999;">©2025 Loopout. All rights reserved.</p>
+                    </div>
+                    <div class="footer-col">
+                        <strong>Product</strong>
+                        <a href="#">Features</a>
+                        <a href="#">How it Works</a>
+                        <a href="#">Pricing</a>
+                    </div>
+                    <div class="footer-col">
+                        <strong>Company</strong>
+                        <a href="#">About</a>
+                        <a href="#">Careers</a>
+                        <a href="#">Contact</a>
+                    </div>
+                    <div class="footer-col">
+                        <strong>Resources</strong>
+                        <a href="#">Help Center</a>
+                        <a href="#">Updates</a>
+                        <a href="#">Guides</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>
