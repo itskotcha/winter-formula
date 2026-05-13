@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Winter Aespa — Formula 1 Driver</title>
-    <link href="https://fonts.googleapis.com/css2?family=Racing+Sans+One&family=Bebas+Neue&family=DM+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Racing+Sans+One&family=Bebas+Neue&family=DM+Sans:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
     <style>
         :root {
             --red: #E8002D;
@@ -16,10 +19,14 @@
             --grey-light: #888;
             --gold: #c9a84c;
             --card-bg: #111111;
-            --card-border: rgba(255,255,255,0.07);
+            --card-border: rgba(255, 255, 255, 0.07);
         }
 
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
         body {
             background-color: var(--black);
@@ -28,14 +35,12 @@
             padding: 40px 20px;
             min-height: 100vh;
             background-image:
-                radial-gradient(ellipse 80% 50% at 50% -10%, rgba(232,0,45,0.18) 0%, transparent 70%),
-                repeating-linear-gradient(
-                    90deg,
+                radial-gradient(ellipse 80% 50% at 50% -10%, rgba(232, 0, 45, 0.18) 0%, transparent 70%),
+                repeating-linear-gradient(90deg,
                     transparent,
                     transparent 60px,
-                    rgba(255,255,255,0.015) 60px,
-                    rgba(255,255,255,0.015) 61px
-                );
+                    rgba(255, 255, 255, 0.015) 60px,
+                    rgba(255, 255, 255, 0.015) 61px);
         }
 
         /* ========== LAYOUT ========== */
@@ -63,7 +68,9 @@
         .column::before {
             content: '';
             position: absolute;
-            top: 0; left: 0; right: 0;
+            top: 0;
+            left: 0;
+            right: 0;
             height: 3px;
             background: linear-gradient(90deg, var(--red), var(--gold), transparent);
         }
@@ -111,8 +118,8 @@
         /* ========== BADGE ========== */
         .badge {
             display: inline-block;
-            background: rgba(232,0,45,0.15);
-            border: 1px solid rgba(232,0,45,0.4);
+            background: rgba(232, 0, 45, 0.15);
+            border: 1px solid rgba(232, 0, 45, 0.4);
             color: #ff4466;
             font-size: 10px;
             font-weight: 700;
@@ -161,7 +168,10 @@
             transition: background 0.2s;
             font-family: 'DM Sans', sans-serif;
         }
-        .btn-red:hover { background: var(--red-dark); }
+
+        .btn-red:hover {
+            background: var(--red-dark);
+        }
 
         .btn-outline {
             background: transparent;
@@ -176,7 +186,11 @@
             transition: border-color 0.2s;
             font-family: 'DM Sans', sans-serif;
         }
-        .btn-outline:hover { border-color: var(--red); color: var(--red); }
+
+        .btn-outline:hover {
+            border-color: var(--red);
+            color: var(--red);
+        }
 
         /* ========== FEATURE GRID ========== */
         .feature-grid {
@@ -190,13 +204,18 @@
             padding: 20px;
             border-radius: 14px;
             text-align: center;
-            border: 1px solid rgba(255,255,255,0.05);
+            border: 1px solid rgba(255, 255, 255, 0.05);
             transition: border-color 0.2s;
         }
-        .feature-card:hover { border-color: rgba(232,0,45,0.35); }
+
+        .feature-card:hover {
+            border-color: rgba(232, 0, 45, 0.35);
+        }
 
         /* ========== PRICING ========== */
-        .pricing-section { text-align: center; }
+        .pricing-section {
+            text-align: center;
+        }
 
         .pricing-grid {
             display: flex;
@@ -211,7 +230,7 @@
             padding: 24px 18px;
             border-radius: 14px;
             text-align: left;
-            border: 1px solid rgba(255,255,255,0.06);
+            border: 1px solid rgba(255, 255, 255, 0.06);
         }
 
         .price-card.pro {
@@ -220,8 +239,13 @@
             transform: scale(1.05);
         }
 
-        .price-card.pro p { color: rgba(255,255,255,0.75); }
-        .price-card.pro h2 { color: #fff; }
+        .price-card.pro p {
+            color: rgba(255, 255, 255, 0.75);
+        }
+
+        .price-card.pro h2 {
+            color: #fff;
+        }
 
         .price-card .price-label {
             font-size: 10px;
@@ -232,11 +256,18 @@
             font-weight: 600;
         }
 
-        .price-card.pro .price-label { color: rgba(255,255,255,0.7); }
+        .price-card.pro .price-label {
+            color: rgba(255, 255, 255, 0.7);
+        }
 
-        .price-card .btn-outline { width: 100%; margin-top: 16px; text-align: center; }
+        .price-card .btn-outline {
+            width: 100%;
+            margin-top: 16px;
+            text-align: center;
+        }
+
         .price-card.pro .btn-outline {
-            border-color: rgba(255,255,255,0.6);
+            border-color: rgba(255, 255, 255, 0.6);
             color: #fff;
             width: 100%;
             margin-top: 16px;
@@ -277,13 +308,13 @@
         /* ========== DIVIDER ========== */
         .divider {
             height: 1px;
-            background: rgba(255,255,255,0.07);
+            background: rgba(255, 255, 255, 0.07);
         }
 
         /* ========== CTA BLOCK ========== */
         .cta-block {
-            background: linear-gradient(135deg, rgba(232,0,45,0.25), rgba(10,10,10,0.6));
-            border: 1px solid rgba(232,0,45,0.3);
+            background: linear-gradient(135deg, rgba(232, 0, 45, 0.25), rgba(10, 10, 10, 0.6));
+            border: 1px solid rgba(232, 0, 45, 0.3);
             padding: 36px 30px;
             border-radius: 16px;
             text-align: center;
@@ -294,7 +325,7 @@
             display: flex;
             justify-content: space-between;
             font-size: 12px;
-            border-top: 1px solid rgba(255,255,255,0.07);
+            border-top: 1px solid rgba(255, 255, 255, 0.07);
             padding-top: 24px;
             gap: 20px;
         }
@@ -320,7 +351,9 @@
             transition: color 0.2s;
         }
 
-        .footer-col a:hover { color: var(--red); }
+        .footer-col a:hover {
+            color: var(--red);
+        }
 
         /* ========== STAT ROW ========== */
         .stat-row {
@@ -354,227 +387,289 @@
 
         /* ========== RESPONSIVE ========== */
         @media (max-width: 900px) {
-            body { padding: 16px 10px; }
+            body {
+                padding: 16px 10px;
+            }
 
-            .split-layout { flex-direction: column; }
+            .split-layout {
+                flex-direction: column;
+            }
 
-            .column { padding: 24px; gap: 40px; }
+            .column {
+                padding: 24px;
+                gap: 40px;
+            }
 
-            h1 { font-size: 38px; }
-            h2 { font-size: 26px; }
+            h1 {
+                font-size: 38px;
+            }
 
-            .feature-grid { grid-template-columns: 1fr; }
+            h2 {
+                font-size: 26px;
+            }
+
+            .feature-grid {
+                grid-template-columns: 1fr;
+            }
 
             .pricing-grid {
                 flex-direction: column;
                 align-items: stretch;
             }
 
-            .price-card.pro { transform: scale(1); }
+            .price-card.pro {
+                transform: scale(1);
+            }
 
-            .feature-list { flex-direction: column; }
+            .feature-list {
+                flex-direction: column;
+            }
 
             .feature-list .placeholder-img {
                 width: 100% !important;
                 height: 180px;
             }
 
-            .footer { flex-direction: column; gap: 28px; }
-            .footer > div { width: 100% !important; }
+            .footer {
+                flex-direction: column;
+                gap: 28px;
+            }
 
-            .stat-row { flex-wrap: wrap; }
-            .stat-item { min-width: calc(50% - 10px); }
+            .footer>div {
+                width: 100% !important;
+            }
 
-            .btn-group { flex-direction: column; align-items: center; }
-            .btn-red, .btn-outline { width: 100%; max-width: 320px; text-align: center; }
+            .stat-row {
+                flex-wrap: wrap;
+            }
+
+            .stat-item {
+                min-width: calc(50% - 10px);
+            }
+
+            .btn-group {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .btn-red,
+            .btn-outline {
+                width: 100%;
+                max-width: 320px;
+                text-align: center;
+            }
         }
     </style>
 </head>
+
 <body>
 
-<div class="split-layout">
+    <div class="split-layout">
 
-    <!-- ========== LEFT COLUMN ========== -->
-    <div class="column">
+        <!-- ========== LEFT COLUMN ========== -->
+        <div class="column">
 
-        <!-- HERO -->
-        <div style="text-align: center;">
-            <p class="accent-text" style="margin-bottom: 20px;">Formula 1 — Season 2025</p>
-            <div class="badge">🏆 Rookie of the Year Candidate</div>
-            <h1>Speed.<br>Precision.<br>Winter.</h1>
-            <p style="font-size: 14px; max-width: 320px; margin: 12px auto 0;">Follow every corner of <strong style="color:var(--white);">Winter Aespa</strong> — the rising star that the entire F1 world is watching this season.</p>
+            <!-- HERO -->
+            <div style="text-align: center;">
+                <p class="accent-text" style="margin-bottom: 20px;">Formula 1 — Season 2025</p>
+                <div class="badge">🏆 Rookie of the Year Candidate</div>
+                <h1>Speed.<br>Precision.<br>Winter.</h1>
+                <p style="font-size: 14px; max-width: 320px; margin: 12px auto 0;">Follow every corner of <strong
+                        style="color:var(--white);">Winter Aespa</strong> — the rising star that the entire F1 world is
+                    watching this season.</p>
 
-            <div class="btn-group">
-                <button class="btn-red">🚨 Race Schedule 2025</button>
-                <button class="btn-outline">Watch Highlights ›</button>
+                <div class="btn-group">
+                    <button class="btn-red">🚨 Race Schedule 2025</button>
+                    <button class="btn-outline">Watch Highlights ›</button>
+                </div>
+
+                <div class="stat-row">
+                    <div class="stat-item">
+                        <div class="stat-num">7</div>
+                        <div class="stat-label">Podiums</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-num">312</div>
+                        <div class="stat-label">Points</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-num">#3</div>
+                        <div class="stat-label">Championship</div>
+                    </div>
+                </div>
+
+                <div class="placeholder-img" style="height: 240px; margin-top: 28px;">
+                    <img src="img/ferrari-sf23.gif" alt="Winter Aespa in F1 race suit"
+                        style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+                </div>
             </div>
 
-            <div class="stat-row">
-                <div class="stat-item">
-                    <div class="stat-num">7</div>
-                    <div class="stat-label">Podiums</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-num">312</div>
-                    <div class="stat-label">Points</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-num">#3</div>
-                    <div class="stat-label">Championship</div>
+            <!-- DRIVING STYLE -->
+            <div>
+                <span class="accent-text">Driver Profile</span>
+                <h2 style="margin-top: 8px;">A Form as Fierce<br>as the Cold</h2>
+                <p>Winter's driving style blends aggressive overtaking with precise tyre management — making her the
+                    most dangerous competitor on the grid this year.</p>
+                <div class="placeholder-img" style="height: 200px; margin-top: 20px;">
+                    <img src="img/1.jpg" alt="Graphic: Winter's Driving Data / Telemetry"
+                        style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
                 </div>
             </div>
 
-            <div class="placeholder-img" style="height: 240px; margin-top: 28px;">
-                [ Photo: Winter Aespa in F1 race suit ]
+            <!-- PLATFORM GRID -->
+            <div>
+                <span class="accent-text">Race Circuits</span>
+                <h2 style="margin-top: 8px;">Circuits Where<br>Winter Left Her Mark</h2>
+                <div class="feature-grid" style="margin-top: 20px;">
+                    <div class="feature-card">
+                        <img src="img/2.jpg" alt="Monaco GP"
+                            style="width: 100%; height: 120px; object-fit: cover; border-radius: 8px; margin-bottom: 12px;">
+                        <h3 style="color: var(--white);">Monaco Grand Prix</h3>
+                        <p style="margin-top: 4px; font-size: 11px;">P2 — Fastest Lap</p>
+                    </div>
+                    <div class="feature-card">
+                        <img src="img/4.jpg" alt="Suzuka GP"
+                            style="width: 100%; height: 120px; object-fit: cover; border-radius: 8px; margin-bottom: 12px;">
+                        <h3 style="color: var(--white);">Japanese Grand Prix</h3>
+                        <p style="margin-top: 4px; font-size: 11px;">P1 — Race Winner 🏆</p>
+                    </div>
+                </div>
             </div>
+
         </div>
 
-        <!-- DRIVING STYLE -->
-        <div>
-            <span class="accent-text">Driver Profile</span>
-            <h2 style="margin-top: 8px;">A Form as Fierce<br>as the Cold</h2>
-            <p>Winter's driving style blends aggressive overtaking with precise tyre management — making her the most dangerous competitor on the grid this year.</p>
-            <div class="placeholder-img" style="height: 200px; margin-top: 20px;">
-                [ Graphic: Winter's Driving Data / Telemetry ]
-            </div>
-        </div>
+        <!-- ========== RIGHT COLUMN ========== -->
+        <div class="column">
 
-        <!-- PLATFORM GRID -->
-        <div>
-            <span class="accent-text">Race Circuits</span>
-            <h2 style="margin-top: 8px;">Circuits Where<br>Winter Left Her Mark</h2>
-            <div class="feature-grid" style="margin-top: 20px;">
-                <div class="feature-card">
-                    <div class="placeholder-img" style="height: 90px; border: none; background: #222; margin-bottom: 12px;">[ Monaco GP ]</div>
-                    <h3 style="color: var(--white);">Monaco Grand Prix</h3>
-                    <p style="margin-top: 4px; font-size: 11px;">P2 — Fastest Lap</p>
-                </div>
-                <div class="feature-card">
-                    <div class="placeholder-img" style="height: 90px; border: none; background: #222; margin-bottom: 12px;">[ Suzuka GP ]</div>
-                    <h3 style="color: var(--white);">Japanese Grand Prix</h3>
-                    <p style="margin-top: 4px; font-size: 11px;">P1 — Race Winner 🏆</p>
+            <!-- UPCOMING RACES GRID -->
+            <div>
+                <span class="accent-text">Upcoming</span>
+                <h2 style="margin-top: 8px;">Winter's Next Races</h2>
+                <div class="feature-grid" style="margin-top: 16px;">
+                    <div class="feature-card">
+                        <img src="img/5.jpg" alt="Silverstone"
+                            style="width: 100%; height: 110px; object-fit: cover; border-radius: 8px; margin-bottom: 12px;">
+                        <h3 style="color: var(--white);">British GP</h3>
+                        <p style="font-size: 11px; margin-top: 4px;">Grid 4 · July 6, 2025</p>
+                    </div>
+                    <div class="feature-card">
+                        <img src="img/6.jpg" alt="Spa"
+                            style="width: 100%; height: 110px; object-fit: cover; border-radius: 8px; margin-bottom: 12px;">
+                        <h3 style="color: var(--white);">Belgian GP</h3>
+                        <p style="font-size: 11px; margin-top: 4px;">Grid 2 · July 27, 2025</p>
+                    </div>
                 </div>
             </div>
+
+            <!-- TEAM MEMBERSHIP -->
+            <div class="pricing-section">
+                <span class="accent-text">Fan Membership</span>
+                <h2 style="margin-top: 8px;">Choose Your<br>Fan Package</h2>
+                <p>Get closer to Winter Aespa with exclusive perks for true F1 fans.</p>
+
+                <div class="pricing-grid">
+                    <div class="price-card">
+                        <h2 style="font-size: 22px; color:var(--white);">$0</h2>
+                        <div class="price-label">Free Fan</div>
+                        <p style="font-size: 11px; margin-top: 10px;">News & general race highlights</p>
+                        <button class="btn-outline" style="width:100%; margin-top:14px;">Join Free</button>
+                    </div>
+                    <div class="price-card pro">
+                        <h2 style="font-size: 22px;">$69</h2>
+                        <div class="price-label" style="color:rgba(255,255,255,0.75);">Paddock Club ⭐</div>
+                        <p style="font-size: 11px; margin-top: 10px;">Live telemetry, Radio Onboard & Exclusive Merch
+                        </p>
+                        <button class="btn-outline"
+                            style="width:100%; margin-top:14px; border-color:rgba(255,255,255,0.7); color:#fff;">Join
+                            Now</button>
+                    </div>
+                    <div class="price-card">
+                        <h2 style="font-size: 22px; color:var(--white);">$149</h2>
+                        <div class="price-label">Pit Lane VIP</div>
+                        <p style="font-size: 11px; margin-top: 10px;">Race day access + Meet & Greet with Winter</p>
+                        <button class="btn-outline" style="width:100%; margin-top:14px;">Upgrade</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- RACE TECH SECTION -->
+            <div>
+                <span class="accent-text">Race Technology</span>
+                <h2 style="margin-top: 8px;">The Technology Behind<br>Winter's Speed</h2>
+                <p>Aespa Racing has invested in a new Aero Package and a custom-tuned ERS system — engineered to respond
+                    to every input Winter demands.</p>
+
+                <div class="feature-list" style="margin-top: 24px;">
+                    <div class="placeholder-img" style="width: 38%; min-height: 160px;">
+                        <img src="img/99.jpg" alt="Photo: Car / Engine 3D"
+                            style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+                    </div>
+                    <div class="feature-list-text">
+                        <div class="feature-item">
+                            <strong>Aero Downforce Package</strong>
+                            <p style="font-size: 12px; margin-top: 6px;">New aero kit delivers up to 15% more downforce
+                                through high-speed corners.</p>
+                        </div>
+                        <div class="feature-item">
+                            <strong>ERS Adaptive System</strong>
+                            <p style="font-size: 12px; margin-top: 6px;">Energy Recovery System tailored specifically to
+                                Winter's unique driving pattern.</p>
+                        </div>
+                        <div class="feature-item">
+                            <strong>Tyre Strategy AI</strong>
+                            <p style="font-size: 12px; margin-top: 6px;">Real-time tyre analysis for the most precise
+                                pit stop strategy on the grid.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CTA & FOOTER -->
+            <div>
+                <div class="cta-block">
+                    <span class="accent-text">Join the Winter Nation</span>
+                    <h2 style="margin-top: 12px; font-size: 28px;">Ready to Cheer Winter<br>to the World Championship?
+                    </h2>
+                    <div class="btn-group" style="margin-top: 20px;">
+                        <button class="btn-red">🏁 Become a Fan Now</button>
+                    </div>
+                </div>
+
+                <div class="footer" style="margin-top: 32px;">
+                    <div style="width: 32%;">
+                        <strong
+                            style="font-family:'Racing Sans One', cursive; font-size: 14px; color: var(--red); letter-spacing: 2px;">WINTER
+                            / 77</strong>
+                        <p style="font-size: 11px; margin-top: 8px;">The official fan site of Winter Aespa, Formula 1
+                            driver for Aespa Racing.</p>
+                        <p style="font-size: 10px; margin-top: 16px; color: #444;">©2025 Aespa Racing. All rights
+                            reserved.</p>
+                    </div>
+                    <div class="footer-col">
+                        <strong>Race</strong>
+                        <a href="#">Schedule</a>
+                        <a href="#">Results</a>
+                        <a href="#">Standings</a>
+                    </div>
+                    <div class="footer-col">
+                        <strong>Driver</strong>
+                        <a href="#">Profile</a>
+                        <a href="#">Career</a>
+                        <a href="#">Media</a>
+                    </div>
+                    <div class="footer-col">
+                        <strong>Fan</strong>
+                        <a href="#">Membership</a>
+                        <a href="#">Merch</a>
+                        <a href="#">Community</a>
+                    </div>
+                </div>
+            </div>
+
         </div>
 
     </div>
-
-    <!-- ========== RIGHT COLUMN ========== -->
-    <div class="column">
-
-        <!-- UPCOMING RACES GRID -->
-        <div>
-            <span class="accent-text">Upcoming</span>
-            <h2 style="margin-top: 8px;">Winter's Next Races</h2>
-            <div class="feature-grid" style="margin-top: 16px;">
-                <div class="feature-card">
-                    <div class="placeholder-img" style="height: 110px; border: none; background: #222; margin-bottom: 12px;">[ Silverstone ]</div>
-                    <h3 style="color: var(--white);">British GP</h3>
-                    <p style="font-size: 11px; margin-top: 4px;">Grid 4 · July 6, 2025</p>
-                </div>
-                <div class="feature-card">
-                    <div class="placeholder-img" style="height: 110px; border: none; background: #222; margin-bottom: 12px;">[ Spa ]</div>
-                    <h3 style="color: var(--white);">Belgian GP</h3>
-                    <p style="font-size: 11px; margin-top: 4px;">Grid 2 · July 27, 2025</p>
-                </div>
-            </div>
-        </div>
-
-        <!-- TEAM MEMBERSHIP -->
-        <div class="pricing-section">
-            <span class="accent-text">Fan Membership</span>
-            <h2 style="margin-top: 8px;">Choose Your<br>Fan Package</h2>
-            <p>Get closer to Winter Aespa with exclusive perks for true F1 fans.</p>
-
-            <div class="pricing-grid">
-                <div class="price-card">
-                    <h2 style="font-size: 22px; color:var(--white);">$0</h2>
-                    <div class="price-label">Free Fan</div>
-                    <p style="font-size: 11px; margin-top: 10px;">News & general race highlights</p>
-                    <button class="btn-outline" style="width:100%; margin-top:14px;">Join Free</button>
-                </div>
-                <div class="price-card pro">
-                    <h2 style="font-size: 22px;">$69</h2>
-                    <div class="price-label" style="color:rgba(255,255,255,0.75);">Paddock Club ⭐</div>
-                    <p style="font-size: 11px; margin-top: 10px;">Live telemetry, Radio Onboard & Exclusive Merch</p>
-                    <button class="btn-outline" style="width:100%; margin-top:14px; border-color:rgba(255,255,255,0.7); color:#fff;">Join Now</button>
-                </div>
-                <div class="price-card">
-                    <h2 style="font-size: 22px; color:var(--white);">$149</h2>
-                    <div class="price-label">Pit Lane VIP</div>
-                    <p style="font-size: 11px; margin-top: 10px;">Race day access + Meet & Greet with Winter</p>
-                    <button class="btn-outline" style="width:100%; margin-top:14px;">Upgrade</button>
-                </div>
-            </div>
-        </div>
-
-        <!-- RACE TECH SECTION -->
-        <div>
-            <span class="accent-text">Race Technology</span>
-            <h2 style="margin-top: 8px;">The Technology Behind<br>Winter's Speed</h2>
-            <p>Aespa Racing has invested in a new Aero Package and a custom-tuned ERS system — engineered to respond to every input Winter demands.</p>
-
-            <div class="feature-list" style="margin-top: 24px;">
-                <div class="placeholder-img" style="width: 38%; min-height: 160px;">
-                    [ Photo: Car / Engine 3D ]
-                </div>
-                <div class="feature-list-text">
-                    <div class="feature-item">
-                        <strong>Aero Downforce Package</strong>
-                        <p style="font-size: 12px; margin-top: 6px;">New aero kit delivers up to 15% more downforce through high-speed corners.</p>
-                    </div>
-                    <div class="feature-item">
-                        <strong>ERS Adaptive System</strong>
-                        <p style="font-size: 12px; margin-top: 6px;">Energy Recovery System tailored specifically to Winter's unique driving pattern.</p>
-                    </div>
-                    <div class="feature-item">
-                        <strong>Tyre Strategy AI</strong>
-                        <p style="font-size: 12px; margin-top: 6px;">Real-time tyre analysis for the most precise pit stop strategy on the grid.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- CTA & FOOTER -->
-        <div>
-            <div class="cta-block">
-                <span class="accent-text">Join the Winter Nation</span>
-                <h2 style="margin-top: 12px; font-size: 28px;">Ready to Cheer Winter<br>to the World Championship?</h2>
-                <div class="btn-group" style="margin-top: 20px;">
-                    <button class="btn-red">🏁 Become a Fan Now</button>
-                </div>
-            </div>
-
-            <div class="footer" style="margin-top: 32px;">
-                <div style="width: 32%;">
-                    <strong style="font-family:'Racing Sans One', cursive; font-size: 14px; color: var(--red); letter-spacing: 2px;">WINTER / 77</strong>
-                    <p style="font-size: 11px; margin-top: 8px;">The official fan site of Winter Aespa, Formula 1 driver for Aespa Racing.</p>
-                    <p style="font-size: 10px; margin-top: 16px; color: #444;">©2025 Aespa Racing. All rights reserved.</p>
-                </div>
-                <div class="footer-col">
-                    <strong>Race</strong>
-                    <a href="#">Schedule</a>
-                    <a href="#">Results</a>
-                    <a href="#">Standings</a>
-                </div>
-                <div class="footer-col">
-                    <strong>Driver</strong>
-                    <a href="#">Profile</a>
-                    <a href="#">Career</a>
-                    <a href="#">Media</a>
-                </div>
-                <div class="footer-col">
-                    <strong>Fan</strong>
-                    <a href="#">Membership</a>
-                    <a href="#">Merch</a>
-                    <a href="#">Community</a>
-                </div>
-            </div>
-        </div>
-
-    </div>
-
-</div>
 
 </body>
+
 </html>
